@@ -251,44 +251,7 @@ sup {
 img {
   border-style: none; }
 
-/* ==========================================================================
-    Search Bar
-   ========================================================================== */
-  .search-label {
-    color: #439A86;
-    border-bottom: thin solid #439A86;
-  }
-  .left-search {
-    border: none;
-    width: 350px;
-    font: 16px "Lato, San Seriff";
-  }
 
-  .left-search-bg {
-    background: white;
-    height: 80px;
-    border-radius: 3px 0 0 3px;
-    border: 1px solid gray;
-  }
-
-  .right-search-bg {
-    background: white;
-    height: 80px;
-    width: auto;
-    border-radius: 0 3px 3px 0;
-    border: 1px solid gray;
-  }
-
-  .right-search {
-    border: none;
-    width: auto;
-    font: 16px "Lato, San Seriff";
-
-  }
-
- .search-nav {
-    height: 80px;
-}  
 
 /* Forms
    ========================================================================== */

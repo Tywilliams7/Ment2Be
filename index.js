@@ -1,8 +1,12 @@
 const express = require('express');
 const mysql   = require('mysql');
+const bodyParser = require('body-parser')
+
 const port    = 3000;
 
 const app = express();
+app.use(bodyParser.json())
+
 
 
 //Create Connection
@@ -24,12 +28,12 @@ db.query('SELECT 1 + 1 AS solution', function (err, res, fields) {
 
 
 
-
+// Test
 app.get('/', function (req, res) {
     res.send('Hello World')
 });
 
-
+// Insert test
 app.get('/user', (req, res) => {
     let user = {
         first_name: 'john',
@@ -43,6 +47,18 @@ app.get('/user', (req, res) => {
         console.log(result);
         console.log(user)
         res.send('User added')
+        
+    });
+});
+
+// Read test
+app.get('/users', (req, res) => {
+    
+    let sql = 'SELECT * FROM user';
+    let query = db.query(sql, (err, result) => {
+        if(err) throw(err);
+        console.log(result);
+        res.send(result)
         
     });
 });
